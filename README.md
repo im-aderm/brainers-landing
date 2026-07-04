@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BrainOS — Landing Page
 
-## Getting Started
+The public face of **BrainOS**, the enterprise AI operating system by **Brainers Labs**.
+A dark, glass, 3D-native landing page built to feel expensive: every pixel has a reason.
 
-First, run the development server:
+## Stack
+
+- **Next.js 15** (App Router, Turbopack) + **React 19** + **TypeScript**
+- **Tailwind CSS v4** — design tokens live in `app/globals.css` under `@theme`
+- **Framer Motion** — scroll storytelling, reveals, magnetic buttons, cursor
+- **React Three Fiber + Three.js** — neural field, brain core, knowledge graph (custom GLSL)
+- **@react-three/postprocessing** — bloom on the hero
+- **Lenis** — smooth scrolling
+- **Lucide** — icons
+
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev    # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  layout.tsx        SEO + Open Graph metadata, fonts (Geist), viewport/theme
+  page.tsx          Section composition
+  globals.css       Design tokens (@theme), glass/noise/gradient utilities
+  loading.tsx       Route-level loading state
+  not-found.tsx     404 ("This page isn't in the graph.")
+  icon.svg          Favicon (also public/apple-icon.png, public/og.png)
+components/
+  chrome/           Navbar, Footer, Preloader, ScrollProgress, CustomCursor, SmoothScroll
+  ui/               Reveal/Stagger (scroll entrances), MagneticButton, SectionHeading, BrainMark
+  three/            SceneCanvas (visibility-gated render loop), NeuralField, BrainCore,
+                    GraphScene (interactive knowledge graph), HeroScene, MiniCoreScene
+  sections/         Hero, Problem, HowItWorks, KnowledgeGraphSection, SearchExperience,
+                    Dashboard, Security, Integrations, Comparison, Testimonials, FinalCTA
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design tokens
 
-## Learn More
+| Token | Value | Use |
+| --- | --- | --- |
+| `space` | `#05070A` | Primary background |
+| `ink` | `#0B1020` | Secondary background |
+| `accent` | `#3B82F6` | Electric blue |
+| `violet` | `#7C5CFC` | AI purple |
+| `success` / `warning` | `#18C964` / `#F5A524` | Status |
+| `text-secondary` / `text-muted` | `#B8C2D1` / `#7A8797` | Copy |
+| `card` / `edge` | `rgba(255,255,255,.04)` / `rgba(255,255,255,.08)` | Glass surfaces |
 
-To learn more about Next.js, take a look at the following resources:
+Utilities: `.glass`, `.glass-strong`, `.noise`, `.gradient-text`, `.text-glow`, `.hairline-gradient`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Performance notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- All Three.js code is **dynamically imported** (`ssr: false`) — first-load JS stays ~190 kB.
+- `SceneCanvas` stops the WebGL render loop entirely when a scene scrolls off screen.
+- Hero quality auto-degrades on small/touch screens (fewer nodes, no bloom, core recedes).
+- `prefers-reduced-motion` disables smooth scroll, custom cursor, and entrance animations.
+- Fully static export-able: every route pre-renders (`○ Static`).
