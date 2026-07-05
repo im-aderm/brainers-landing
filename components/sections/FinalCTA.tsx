@@ -48,14 +48,14 @@ export function FinalCTA() {
 
         <Reveal delay={0.12}>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-text-secondary">
-            See BrainOS working on your own documents. A 30-minute demo is all
+            See BrainersOS working on your own documents. A 30-minute demo is all
             it takes to understand what your organization has been missing.
           </p>
         </Reveal>
 
         <Reveal delay={0.22}>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <MagneticButton href="mailto:hello@brainerslabs.com?subject=BrainOS%20Demo%20Request">
+            <MagneticButton href="mailto:hello@brainerslabs.com?subject=BrainersOS%20Demo%20Request">
               Request Demo <ArrowRight size={16} />
             </MagneticButton>
             <MagneticButton variant="ghost" href="mailto:hello@brainerslabs.com">
@@ -66,7 +66,7 @@ export function FinalCTA() {
 
         <Reveal delay={0.3}>
           <p className="mt-12 text-xs uppercase tracking-[0.25em] text-text-muted">
-            BrainOS — by Brainers Labs
+            BrainersOS — by Brainers Labs
           </p>
         </Reveal>
       </div>

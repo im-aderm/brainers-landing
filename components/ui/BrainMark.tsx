@@ -1,4 +1,4 @@
-/** The BrainOS logomark — a neural core in a rounded square. Pure SVG, no assets. */
+/** The BrainersOS logomark — a neural core in a rounded square. Pure SVG, no assets. */
 export function BrainMark({ size = 28 }: { size?: number }) {
   return (
     <svg

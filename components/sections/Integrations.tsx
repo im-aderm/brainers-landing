@@ -35,7 +35,7 @@ function polar(angle: number, radius: number) {
 }
 
 /**
- * The connector constellation: every tool orbits the BrainOS hub with a
+ * The connector constellation: every tool orbits the BrainersOS hub with a
  * faint synapse line. Chips float gently and expand on hover.
  */
 export function Integrations() {
@@ -44,7 +44,7 @@ export function Integrations() {
       <SectionHeading
         eyebrow="Integrations"
         title="It already speaks to your tools."
-        subtitle="BrainOS connects to the systems your teams live in — no migration, no new habits, nothing to move."
+        subtitle="BrainersOS connects to the systems your teams live in — no migration, no new habits, nothing to move."
       />
 
       <Reveal className="mt-16" y={40}>

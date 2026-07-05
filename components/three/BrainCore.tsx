@@ -5,7 +5,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 /**
- * The BrainOS core: a digital intelligence core — not a human brain.
+ * The BrainersOS core: a digital intelligence core — not a human brain.
  * Layers, inside out:
  *  1. an energy heart whose surface breathes with flowing light,
  *  2. a chrome-blue neural lattice (wireframe icosahedron) counter-rotating,

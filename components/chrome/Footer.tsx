@@ -23,7 +23,7 @@ export function Footer() {
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2.5">
             <BrainMark size={30} />
-            <span className="text-[15px] font-semibold tracking-tight">BrainOS</span>
+            <span className="text-[15px] font-semibold tracking-tight">BrainersOS</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-muted">
             The AI operating system that turns everything your company knows

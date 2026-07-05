@@ -16,7 +16,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Our regulators expect evidence, not opinions. BrainOS gives every answer a paper trail. That changed how our compliance team works overnight.",
+      "Our regulators expect evidence, not opinions. BrainersOS gives every answer a paper trail. That changed how our compliance team works overnight.",
     name: "Daniel Mensah",
     role: "Chief Risk Officer",
     org: "Helix Capital",
@@ -25,7 +25,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "We evaluated every enterprise search product on the market. BrainOS was the only one that understood our documents instead of just indexing them.",
+      "We evaluated every enterprise search product on the market. BrainersOS was the only one that understood our documents instead of just indexing them.",
     name: "Sarah Lindqvist",
     role: "Chief Information Officer",
     org: "Meridian Group",
@@ -38,7 +38,7 @@ export function Testimonials() {
   return (
     <section className="relative mx-auto max-w-6xl px-6 py-32 sm:py-44">
       <SectionHeading
-        eyebrow="Leaders on BrainOS"
+        eyebrow="Leaders on BrainersOS"
         title="Built for the people accountable for answers."
       />
 

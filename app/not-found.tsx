@@ -22,7 +22,7 @@ export default function NotFound() {
         href="/"
         className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-white shadow-[0_0_32px_rgba(59,130,246,0.45)] transition-colors hover:bg-[#4b8ef7]"
       >
-        Back to BrainOS
+        Back to BrainersOS
       </Link>
     </main>
   );

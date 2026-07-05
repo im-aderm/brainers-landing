@@ -127,7 +127,7 @@ export function Problem() {
             One brain. <span className="gradient-text">Every answer.</span>
           </h3>
           <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-text-secondary sm:text-base">
-            BrainOS connects the knowledge scattered across your tools into a
+            BrainersOS connects the knowledge scattered across your tools into a
             single intelligence your whole organization can rely on.
           </p>
         </motion.div>

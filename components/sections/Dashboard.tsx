@@ -127,7 +127,7 @@ export function Dashboard() {
       <SectionHeading
         eyebrow="Enterprise intelligence"
         title="Watch your organization get smarter."
-        subtitle="A single view of everything BrainOS has learned — what's connected, what's growing, and what needs attention."
+        subtitle="A single view of everything BrainersOS has learned — what's connected, what's growing, and what needs attention."
       />
 
       <Reveal className="mt-16 [perspective:1600px]" y={48}>

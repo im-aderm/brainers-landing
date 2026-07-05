@@ -36,8 +36,8 @@ export function Comparison() {
   return (
     <section className="relative mx-auto max-w-6xl px-6 py-32 sm:py-44">
       <SectionHeading
-        eyebrow="Why BrainOS"
-        title="Search finds documents. BrainOS finds answers."
+        eyebrow="Why BrainersOS"
+        title="Search finds documents. BrainersOS finds answers."
       />
 
       <Stagger className="mt-16 space-y-3">
@@ -49,7 +49,7 @@ export function Comparison() {
               Traditional enterprise search
             </p>
             <p className="gradient-text text-center text-xs font-semibold uppercase tracking-[0.2em]">
-              BrainOS
+              BrainersOS
             </p>
           </div>
         </StaggerItem>

@@ -107,7 +107,7 @@ export function SearchExperience() {
             <span className="h-2.5 w-2.5 rounded-full bg-white/12" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/12" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/12" />
-            <span className="ml-3 text-xs text-text-muted">BrainOS — Enterprise Search</span>
+            <span className="ml-3 text-xs text-text-muted">BrainersOS — Enterprise Search</span>
           </div>
 
           <div className="p-6 sm:p-8">

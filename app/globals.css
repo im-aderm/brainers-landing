@@ -16,8 +16,9 @@
   --color-edge: rgba(255, 255, 255, 0.08);
   --color-edge-strong: rgba(255, 255, 255, 0.14);
 
-  /* ——— Holo hero palette (sampled from hero-sample.webm) ——— */
-  --color-lime: #b5f84c;
+  /* ——— Hero palette: electric-blue AI identity on Holo layout ——— */
+  --color-electric: #3d7bff;
+  --color-neon: #35d6ff;
   --color-holo: #050505;
   --color-holo-card: #0d0d0d;
 
@@ -127,6 +128,11 @@ body {
 
 .text-glow {
   text-shadow: 0 0 40px rgba(59, 130, 246, 0.35);
+}
+
+/* Primary action surface: violet → electric blue → cyan */
+.electric-gradient {
+  background: linear-gradient(135deg, #7c5cfc, #3d7bff 52%, #35d6ff);
 }
 
 .gradient-text {

@@ -21,13 +21,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://brainos.brainerslabs.com"),
   title: {
-    default: "BrainOS — Your Company's Intelligence. Finally Connected.",
-    template: "%s — BrainOS",
+    default: "BrainersOS — Your Company's Intelligence. Finally Connected.",
+    template: "%s — BrainersOS",
   },
   description:
-    "BrainOS by Brainers Labs turns every document, policy, and conversation in your company into one intelligent brain your teams can search, reason with, and trust.",
+    "BrainersOS by Brainers Labs turns every document, policy, and conversation in your company into one intelligent brain your teams can search, reason with, and trust.",
   keywords: [
-    "BrainOS",
+    "BrainersOS",
     "Brainers Labs",
     "enterprise AI",
     "knowledge graph",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Brainers Labs" }],
   openGraph: {
     type: "website",
-    siteName: "BrainOS",
-    title: "BrainOS — Your Company's Intelligence. Finally Connected.",
+    siteName: "BrainersOS",
+    title: "BrainersOS — Your Company's Intelligence. Finally Connected.",
     description:
       "The AI operating system that turns everything your company knows into answers your teams can trust.",
     url: "https://brainos.brainerslabs.com",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "BrainOS — the enterprise AI operating system",
+        alt: "BrainersOS — the enterprise AI operating system",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrainOS — Your Company's Intelligence. Finally Connected.",
+    title: "BrainersOS — Your Company's Intelligence. Finally Connected.",
     description:
       "The AI operating system that turns everything your company knows into answers your teams can trust.",
     images: ["/og.png"],

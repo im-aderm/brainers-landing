@@ -17,7 +17,7 @@ const STAGES = [
   {
     icon: Plug,
     title: "Connect",
-    body: "BrainOS plugs into the tools you already use — drives, email, chat, wikis — with nothing to migrate.",
+    body: "BrainersOS plugs into the tools you already use — drives, email, chat, wikis — with nothing to migrate.",
   },
   {
     icon: FileOutput,
@@ -37,7 +37,7 @@ const STAGES = [
   {
     icon: Search,
     title: "Search",
-    body: "Anyone asks in plain language. BrainOS finds the answer across everything your company knows.",
+    body: "Anyone asks in plain language. BrainersOS finds the answer across everything your company knows.",
   },
   {
     icon: BadgeCheck,
@@ -61,7 +61,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="relative mx-auto max-w-6xl px-6 py-32 sm:py-44">
       <SectionHeading
-        eyebrow="How BrainOS works"
+        eyebrow="How BrainersOS works"
         title="From scattered files to trusted answers."
         subtitle="Six quiet steps happen behind the scenes. Your teams only see the last one: answers they can verify."
       />

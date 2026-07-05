@@ -76,7 +76,7 @@ export function Security() {
         <SectionHeading
           eyebrow="Security"
           title="Trusted with what matters most."
-          subtitle="Your knowledge is your most valuable asset. BrainOS treats it that way — with bank-grade protection at every layer."
+          subtitle="Your knowledge is your most valuable asset. BrainersOS treats it that way — with bank-grade protection at every layer."
         />
 
         <Reveal className="mt-16">
