@@ -151,6 +151,10 @@ function SeveredLine({
   isHovered: boolean;
   color: string;
 }) {
+  const breakT = 0.62;
+  const bx = from.x + (to.x - from.x) * breakT;
+  const by = from.y + (to.y - from.y) * breakT;
+
   const gradId = `sever-${index}`;
 
   return (
@@ -202,24 +206,82 @@ function SeveredLine({
         }}
       />
 
-      {/* Dissolving Signal Pulse (Evaporates and fades out at 60% distance when not hovered) */}
+      {/* Outward Request Pulse & Red Bounce Back Signal (Looping visual story of query failure) */}
       {!reduce && (
-        <motion.circle
-          r={isHovered ? 1.5 : 1}
-          fill={isHovered ? color : "rgba(239,68,68,0.7)"}
-          initial={{ cx: from.x, cy: from.y }}
+        <>
+          {isHovered ? (
+            // Solid healthy connection flow towards the center hub
+            <motion.circle
+              r={1.5}
+              fill={color}
+              initial={{ cx: from.x, cy: from.y }}
+              animate={{
+                cx: [from.x, to.x],
+                cy: [from.y, to.y],
+              }}
+              transition={{
+                duration: 1.4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ) : (
+            // Interrupted connection loop: white outward query turns to red warning upon hitting the red X, then returns
+            <motion.circle
+              r={1}
+              initial={{ cx: to.x, cy: to.y }}
+              animate={{
+                cx: [to.x, bx, to.x],
+                cy: [to.y, by, to.y],
+                fill: ["rgba(255,255,255,0.7)", "rgba(239,68,68,0.95)", "rgba(239,68,68,0.95)"],
+              }}
+              transition={{
+                duration: 2.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: index * 0.22,
+              }}
+            />
+          )}
+        </>
+      )}
+
+      {/* Pulsing Red Star/Cross (Only when not hovered, flashes in sync with return bounce) */}
+      {!isHovered && (
+        <motion.g
           animate={{
-            cx: [from.x, to.x],
-            cy: [from.y, to.y],
-            opacity: isHovered ? [0.9, 0.9] : [0.85, 0.6, 0],
+            scale: [1, 1.28, 1],
+            opacity: [0.35, 0.95, 0.35],
           }}
           transition={{
-            duration: isHovered ? 1.4 : 2.4,
+            duration: 2.8,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: index * 0.15,
+            delay: index * 0.22,
           }}
-        />
+          style={{ transformOrigin: `${bx}px ${by}px` }}
+        >
+          <line
+            x1={bx - 1.1}
+            y1={by - 1.1}
+            x2={bx + 1.1}
+            y2={by + 1.1}
+            stroke="rgba(239,68,68,0.9)"
+            strokeWidth={1.2}
+            vectorEffect="non-scaling-stroke"
+            strokeLinecap="round"
+          />
+          <line
+            x1={bx + 1.1}
+            y1={by - 1.1}
+            x2={bx - 1.1}
+            y2={by + 1.1}
+            stroke="rgba(239,68,68,0.9)"
+            strokeWidth={1.2}
+            vectorEffect="non-scaling-stroke"
+            strokeLinecap="round"
+          />
+        </motion.g>
       )}
     </g>
   );
