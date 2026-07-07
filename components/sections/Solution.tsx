@@ -481,6 +481,8 @@ export function Solution() {
           </div>
         </Reveal>
       </div>
+      {/* Solution Section Ambient Backdrop Glows */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/8 blur-[120px]" />
     </section>
   );
 }

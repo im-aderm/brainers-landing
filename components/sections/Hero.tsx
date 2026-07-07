@@ -276,6 +276,35 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
+      {/* Drifting Background Glow Spheres */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <motion.div
+          animate={{
+            x: [-40, 40, -40],
+            y: [-30, 30, -30],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute left-[-10%] top-[10%] h-[38rem] w-[38rem] rounded-full bg-accent/8 blur-[130px]"
+        />
+        <motion.div
+          animate={{
+            x: [30, -30, 30],
+            y: [40, -40, 40],
+            scale: [1.1, 0.9, 1.1],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute right-[-10%] bottom-[10%] h-[42rem] w-[42rem] rounded-full bg-violet/6 blur-[150px]"
+        />
+      </div>
     </section>
   );
 }

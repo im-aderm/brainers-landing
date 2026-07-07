@@ -226,6 +226,8 @@ export function Security() {
           </Stagger>
         </div>
       </div>
+      {/* Ambient background glow behind Vault */}
+      <div className="pointer-events-none absolute left-[15%] top-1/2 z-0 h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-neon/8 blur-[130px]" />
     </section>
   );
 }
