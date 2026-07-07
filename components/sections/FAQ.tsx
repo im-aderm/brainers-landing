@@ -196,6 +196,8 @@ export function FAQ() {
           </motion.div>
         </div>
       </div>
+      {/* FAQ background glow */}
+      <div className="pointer-events-none absolute right-[10%] top-1/2 z-0 h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-violet/4 blur-[130px]" />
     </section>
   );
 }

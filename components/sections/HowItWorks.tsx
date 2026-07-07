@@ -183,6 +183,8 @@ export function HowItWorks() {
           })}
         </div>
       </div>
+      {/* HowItWorks center-left background glow */}
+      <div className="pointer-events-none absolute left-[-5%] top-1/2 z-0 h-[480px] w-[480px] -translate-y-1/2 rounded-full bg-accent/6 blur-[130px]" />
     </section>
   );
 }

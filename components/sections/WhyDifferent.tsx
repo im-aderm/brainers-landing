@@ -146,6 +146,9 @@ export function WhyDifferent() {
           </span>
         </div>
       </div>
+      {/* WhyDifferent section background glows */}
+      <div className="pointer-events-none absolute left-[-5%] top-1/3 z-0 h-[400px] w-[400px] rounded-full bg-accent/4 blur-[130px]" />
+      <div className="pointer-events-none absolute right-[-5%] bottom-1/3 z-0 h-[400px] w-[400px] rounded-full bg-violet/4 blur-[130px]" />
     </section>
   );
 }

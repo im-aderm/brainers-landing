@@ -71,6 +71,8 @@ export function CustomerStories() {
           ))}
         </Stagger>
       </div>
+      {/* CustomerStories background glow */}
+      <div className="pointer-events-none absolute left-[15%] top-1/2 z-0 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-accent/4 blur-[130px]" />
     </section>
   );
 }

@@ -338,6 +338,8 @@ export function KnowledgeGraphSection() {
           </Reveal>
         </div>
       </div>
+      {/* Knowledge Graph Section background glow */}
+      <div className="pointer-events-none absolute right-[-5%] top-[40%] z-0 h-[480px] w-[480px] rounded-full bg-violet/5 blur-[120px]" />
     </section>
   );
 }

@@ -152,6 +152,8 @@ export function Integrations() {
           Plus databases, file shares, intranets, and a clean API for everything else.
         </p>
       </Reveal>
+      {/* Integrations background glow */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/6 blur-[130px]" />
     </section>
   );
 }

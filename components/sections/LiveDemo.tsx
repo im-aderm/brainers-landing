@@ -231,6 +231,8 @@ export function LiveDemo() {
           </div>
         </Reveal>
       </div>
+      {/* LiveDemo background glow */}
+      <div className="pointer-events-none absolute right-[5%] top-[25%] z-0 h-[500px] w-[500px] rounded-full bg-violet/6 blur-[140px]" />
     </section>
   );
 }
