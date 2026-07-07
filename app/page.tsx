@@ -26,6 +26,8 @@ export default function Home() {
       <CustomCursor />
       <Navbar />
       <main className="relative noise">
+        {/* Global Tailwind-style background mesh grid */}
+        <div className="absolute inset-0 tailwind-grid opacity-30" style={{ maskImage: "none", WebkitMaskImage: "none" }} />
         <Hero />
         <TrustedBy />
         <Problem />

@@ -158,6 +158,20 @@ body {
   height: 1px;
 }
 
+/* Tailwind-style background mesh grid utility */
+.tailwind-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle 600px at center, black, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle 600px at center, black, transparent 75%);
+  z-index: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
