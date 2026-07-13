@@ -54,8 +54,8 @@ export function Navbar() {
         <nav
           className={`mx-auto flex w-full max-w-7xl items-center justify-between rounded-2xl py-2.5 transition-all duration-500 ${
             floating || mobileMenuOpen
-              ? "border border-white/10 bg-holo/85 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl px-4 sm:px-5"
-              : "border border-transparent px-6 lg:px-10"
+              ? "border border-white/10 bg-holo/85 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl px-6 lg:px-10"
+              : "border border-transparent px-0"
           }`}
           aria-label="Main Navigation"
         >
@@ -63,8 +63,12 @@ export function Navbar() {
             <span className="font-mono text-2xl font-bold tracking-[0.06em] text-white/95">
               Syna
               <motion.span
-                animate={{ scale: [1, 1.15, 1], filter: ["drop-shadow(0 0 2px rgba(59,130,246,0.25))", "drop-shadow(0 0 8px rgba(59,130,246,0.65))", "drop-shadow(0 0 2px rgba(59,130,246,0.25))"] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                animate={{
+                  scale: [1, 1.25, 1],
+                  rotate: [0, 360, 360],
+                  filter: ["drop-shadow(0 0 2px rgba(59,130,246,0.25))", "drop-shadow(0 0 8px rgba(59,130,246,0.65))", "drop-shadow(0 0 2px rgba(59,130,246,0.25))"]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="relative inline-block font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-[#35d6ff] to-[#7c5cfc] ml-1 italic"
               >
                 X
