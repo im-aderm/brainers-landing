@@ -49,13 +49,13 @@ export function Navbar() {
         animate={hidden && !mobileMenuOpen ? "hidden" : "visible"}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         initial={{ y: -80, opacity: 0 }}
-        className="fixed inset-x-0 top-0 z-[80] px-4 pt-4 sm:px-6 sm:pt-5 lg:px-10"
+        className="fixed inset-x-0 top-0 z-[80] px-6 pt-4 lg:px-10"
       >
         <nav
-          className={`mx-auto flex w-full max-w-7xl items-center justify-between rounded-2xl px-6 py-2.5 transition-all duration-500 lg:px-10 ${
+          className={`mx-auto flex w-full max-w-7xl items-center justify-between rounded-2xl py-2.5 transition-all duration-500 ${
             floating || mobileMenuOpen
-              ? "border border-white/10 bg-holo/85 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl"
-              : "border border-transparent"
+              ? "border border-white/10 bg-holo/85 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl px-4 sm:px-5"
+              : "border border-transparent px-0"
           }`}
           aria-label="Main Navigation"
         >

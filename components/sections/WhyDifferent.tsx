@@ -90,49 +90,53 @@ export function WhyDifferent() {
           subtitle="Built from the ground up as a complete shared memory and intelligence layer for your whole company."
         />
 
-        <Stagger className="mt-16" gap={0.06}>
-          {/* Header */}
-          <StaggerItem>
-            <div className="mb-2 grid grid-cols-[1fr_repeat(4,minmax(0,1fr))] gap-3 px-4">
-              <span className="text-xs font-medium uppercase tracking-[0.2em] text-text-muted">Capability</span>
-              {COLUMNS.map((c) => (
-                <span
-                  key={c.key}
-                  className={`text-center text-xs font-medium uppercase tracking-[0.2em] ${
-                    c.key === "Synax" ? "gradient-text" : "text-text-muted"
-                  }`}
-                >
-                  {c.label}
-                </span>
-              ))}
-            </div>
-          </StaggerItem>
+        <div className="mt-16 w-full overflow-x-auto pb-4 -mx-6 px-6 md:mx-0 md:px-0 scrollbar-none">
+          <div className="min-w-[720px] px-1">
+            <Stagger className="w-full" gap={0.06}>
+              {/* Header */}
+              <StaggerItem>
+                <div className="mb-2 grid grid-cols-[1.2fr_repeat(4,minmax(0,1fr))] gap-3 px-4">
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-text-muted">Capability</span>
+                  {COLUMNS.map((c) => (
+                    <span
+                      key={c.key}
+                      className={`text-center text-xs font-medium uppercase tracking-[0.2em] ${
+                        c.key === "Synax" ? "gradient-text" : "text-text-muted"
+                      }`}
+                    >
+                      {c.label}
+                    </span>
+                  ))}
+                </div>
+              </StaggerItem>
 
-          {ROWS.map((row) => (
-            <StaggerItem key={row.capability}>
-              <div
-                className="grid grid-cols-[1fr_repeat(4,minmax(0,1fr))] gap-3 rounded-2xl px-4 py-4 transition-all duration-500 hover:bg-white/[0.02] sm:py-5"
-                data-cursor="hover"
-              >
-                <span className="self-center text-sm font-medium text-white">
-                  {row.capability}
-                </span>
-                {COLUMNS.map((c) => (
+              {ROWS.map((row) => (
+                <StaggerItem key={row.capability}>
                   <div
-                    key={c.key}
-                    className={`flex items-center justify-center self-center rounded-xl py-2 ${
-                      c.key === "Synax"
-                        ? "border border-accent/25 bg-gradient-to-br from-accent/10 to-violet/8 shadow-[0_0_30px_rgba(59,130,246,0.06)]"
-                        : ""
-                    }`}
+                    className="grid grid-cols-[1.2fr_repeat(4,minmax(0,1fr))] gap-3 rounded-2xl px-4 py-4 transition-all duration-500 hover:bg-white/[0.02] sm:py-5"
+                    data-cursor="hover"
                   >
-                    <Cell value={row[c.key] as boolean | "partial"} />
+                    <span className="self-center text-sm font-medium text-white">
+                      {row.capability}
+                    </span>
+                    {COLUMNS.map((c) => (
+                      <div
+                        key={c.key}
+                        className={`flex items-center justify-center self-center rounded-xl py-2 ${
+                          c.key === "Synax"
+                            ? "border border-accent/25 bg-gradient-to-br from-accent/10 to-violet/8 shadow-[0_0_30px_rgba(59,130,246,0.06)]"
+                            : ""
+                        }`}
+                      >
+                        <Cell value={row[c.key] as boolean | "partial"} />
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        </div>
 
         <div className="mt-8 flex items-center justify-center gap-6 text-xs text-text-muted">
           <span className="flex items-center gap-1.5">
