@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { BrainMark } from "../ui/BrainMark";
+import Image from "next/image";
 
 /**
  * Premium boot screen: the logomark pulses while a hairline charges,
@@ -27,12 +27,22 @@ export function Preloader() {
           aria-hidden
         >
           <motion.div
-            initial={{ scale: 0.85, opacity: 0 }}
-            animate={{ scale: [0.85, 1, 0.97, 1], opacity: 1 }}
-            transition={{ duration: 1.3, ease: "easeOut" }}
-            className="drop-shadow-[0_0_40px_rgba(59,130,246,0.5)]"
+            initial={{ scale: 0.85, opacity: 0, filter: "brightness(0.5) blur(2px)" }}
+            animate={{ 
+              scale: [0.85, 1.08, 0.96, 1], 
+              opacity: 1,
+              filter: "brightness(1) blur(0px)"
+            }}
+            transition={{ duration: 1.4, ease: [0.25, 1, 0.5, 1] }}
+            className="rounded-2xl overflow-hidden border border-white/10 bg-[#05070a] p-1.5 shadow-[0_0_40px_rgba(61,123,255,0.25)]"
           >
-            <BrainMark size={56} />
+            <Image
+              src="/favicon.png"
+              alt="Brainers Labs Emblem"
+              width={64}
+              height={64}
+              className="h-16 w-16 object-contain rounded-xl"
+            />
           </motion.div>
           <div className="relative h-px w-40 overflow-hidden rounded-full bg-white/10">
             <motion.div
