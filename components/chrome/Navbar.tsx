@@ -52,20 +52,20 @@ export function Navbar() {
         className="fixed inset-x-0 top-0 z-[80] px-4 pt-4 sm:px-6 sm:pt-5 lg:px-10"
       >
         <nav
-          className={`mx-auto flex w-full max-w-7xl items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-500 sm:px-5 ${
+          className={`mx-auto flex w-full max-w-7xl items-center justify-between rounded-2xl py-2.5 transition-all duration-500 ${
             floating || mobileMenuOpen
-              ? "border border-white/10 bg-holo/85 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl"
-              : "border border-transparent"
+              ? "border border-white/10 bg-holo/85 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl px-4 sm:px-5"
+              : "border border-transparent px-6 lg:px-10"
           }`}
           aria-label="Main Navigation"
         >
           <Link href="/" className="flex items-center" data-cursor="hover">
-            <span className="font-display text-xl font-semibold tracking-tight text-white/90">
+            <span className="font-mono text-2xl font-bold tracking-[0.06em] text-white/95">
               Syna
               <motion.span
                 animate={{ scale: [1, 1.15, 1], filter: ["drop-shadow(0 0 2px rgba(59,130,246,0.25))", "drop-shadow(0 0 8px rgba(59,130,246,0.65))", "drop-shadow(0 0 2px rgba(59,130,246,0.25))"] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="relative inline-block font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-[#35d6ff] to-[#7c5cfc] ml-0.5 italic"
+                className="relative inline-block font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-[#35d6ff] to-[#7c5cfc] ml-1 italic"
               >
                 X
               </motion.span>

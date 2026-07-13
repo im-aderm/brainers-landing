@@ -59,12 +59,12 @@ export function UpdatedFooter() {
         <div className="lg:col-span-2 flex flex-col justify-between gap-8">
           <div>
             <div className="flex items-center">
-              <span className="font-display text-xl font-semibold tracking-tight text-white/90">
+              <span className="font-mono text-2xl font-bold tracking-[0.06em] text-white/95">
                 Syna
                 <motion.span
                   animate={{ scale: [1, 1.15, 1], filter: ["drop-shadow(0 0 2px rgba(59,130,246,0.25))", "drop-shadow(0 0 8px rgba(59,130,246,0.65))", "drop-shadow(0 0 2px rgba(59,130,246,0.25))"] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative inline-block font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-[#35d6ff] to-[#7c5cfc] ml-0.5 italic"
+                  className="relative inline-block font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-[#35d6ff] to-[#7c5cfc] ml-1 italic"
                 >
                   X
                 </motion.span>
