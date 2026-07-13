@@ -385,11 +385,12 @@ export default function IntelligenceCore() {
 
   return (
     <div className="flex w-full flex-col gap-6">
+      {/* Desktop Interactive Graph */}
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative h-[360px] sm:h-[480px] md:h-[560px] w-full overflow-hidden rounded-2xl border border-white/[0.06]"
+        className="relative hidden lg:block h-[560px] w-full overflow-hidden rounded-2xl border border-white/[0.06]"
       >
         <AmbientGrid />
         <InformationStreams />
@@ -398,6 +399,26 @@ export default function IntelligenceCore() {
           <ToolOrb key={tool.label} tool={tool} index={i} mouseX={springX} mouseY={springY} active={activeTool === tool.label} onHover={setActiveTool} />
         ))}
         <NeuralCore mouseX={springX} mouseY={springY} />
+      </div>
+
+      {/* Mobile Stacked Sources Grid with Spacing */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full lg:hidden">
+        {TOOLS.map((tool) => (
+          <div
+            key={tool.label}
+            className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-[#090b10]/40 p-4.5 flex items-center gap-4 transition-all duration-300 hover:border-white/10"
+          >
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.06] font-medium text-white/85 ring-1 ring-white/[0.06]">
+              {tool.icon}
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold text-white">{tool.label}</span>
+              <span className="text-xs font-mono text-white/50 mt-1">
+                {tool.streamPayload}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="grid grid-cols-1 items-center gap-4 rounded-xl border border-white/[0.06] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.01)] md:grid-cols-2">
